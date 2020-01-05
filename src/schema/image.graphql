@@ -1,0 +1,4 @@
+type Image {
+  name: String
+  url: String!
+}

@@ -1,0 +1,36 @@
+{
+  "name": "anigql",
+  "version": "0.0.1-alpha.0",
+  "scripts": {
+    "build": "tsc && cpx 'src/schema/*.graphql' dist/schema",
+    "dev": "cpx -w 'src/schema/*.graphql' dist/schema & tsc -w & NODE_ENV=development nodemon dist/dev.js",
+    "lint": "eslint --ext .ts src",
+    "generate:gql": "graphql-codegen",
+    "start": "NODE_ENV=production node dist/prod.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.15",
+    "apollo-server-cloud-functions": "^2.9.15",
+    "cpx": "^1.5.0",
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0",
+    "graphql": "^14.5.8",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.10.0",
+    "@graphql-codegen/typescript": "^1.9.1",
+    "@graphql-codegen/typescript-operations": "^1.10.0",
+    "@types/node-fetch": "^2.5.4",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  }
+}

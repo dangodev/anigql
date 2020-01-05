@@ -1,0 +1,13 @@
+type Release {
+  ID: String!
+  country: String!
+  film: Film
+  format: String!
+  images: [Image]!
+  notes: String
+  region: String!
+  releaseDay: Int
+  releaseMonth: Int
+  releaseYear: Int!
+  runtime: Int
+}

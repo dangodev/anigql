@@ -1,0 +1,68 @@
+"Film is a work of animation of any length. Could be feature-length; could be television-length."
+type Film {
+  "A unique ID for this film"
+  ID: String!
+  # "Artists includes keyframe artists"
+  artists: [Person!]!
+  "The composers of the film"
+  composers: [Person!]!
+  "The directors of the film"
+  directors: [Person!]!
+  frameSequences: [FrameSequence!]!
+  keyframeArtists: [Person!]!
+  releases: [Release!]!
+  "The earliest release date of the film"
+  releaseYear: Int!
+  "The studio that produced the film"
+  studio: Studio
+  "The original title of the film"
+  title: String!
+  "The film’s localized title in foreign countries"
+  titleIntl: TitleIntl!
+  "The website of the film"
+  website: String
+  "The writers of the film"
+  writers: [Person!]!
+}
+
+enum FilmOrderFields {
+  releaseYear_ASC
+  releaseYear_DESC
+  title_ASC
+  title_DESC
+}
+
+"TitleIntl is a map of 2-letter ISO country codes of all a film’s titles."
+type TitleIntl {
+  au: String
+  br: String
+  ca: String
+  cn: String
+  es: String
+  fr: String
+  gb: String
+  it: String
+  jp: String
+  mx: String
+  nz: String
+  tr: String
+  ua: String
+  us: String!
+}
+
+input Country {
+  au: String
+  br: String
+  ca: String
+  cn: String
+  es: String
+  fr: String
+  gb: String
+  it: String
+  jp: String
+  mx: String
+  nz: String
+  tr: String
+  ua: String
+  us: String!
+}

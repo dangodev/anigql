@@ -1,0 +1,9 @@
+type Studio {
+  ID: String!
+  city: String
+  country: String!
+  films: [Film]!
+  foundedYear: Int!
+  founders: [Person]!
+  name: String!
+}

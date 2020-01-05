@@ -1,0 +1,50 @@
+"A person is usually an artist that worked on a film, but could also be a director, writer, or composer."
+type Person {
+  "A unique ID for this person"
+  ID: String!
+  "Birthdays are split into day/month/year separately because we may not know all parts!"
+  birthDay: Int
+  "Birthdays are split into day/month/year separately because we may not know all parts!"
+  birthMonth: Int
+  "Birthdays are split into day/month/year separately because we may not know all parts!"
+  birthYear: Int
+  "Death days are split into day/month/year separately because we may not know all parts!"
+  deathDay: Int
+  "Death days are split into day/month/year separately because we may not know all parts!"
+  deathMonth: Int
+  "Death days are split into day/month/year separately because we may not know all parts!"
+  deathYear: Int
+  "A short bio for this person"
+  description: String
+  "Films associated with this person"
+  films: [Film!]
+  "This person’s name in Kanji (Japanese only)"
+  kanji: String
+  "The location of this person"
+  location: String
+  "The first name of this person"
+  name: String!
+  "The last name of this person"
+  surname: String!
+  "The website of this person"
+  website: String
+}
+
+enum PeopleOrderFields {
+  birthDay_ASC
+  birthDay_DESC
+  birthMonth_ASC
+  birthMonth_DESC
+  birthYear_ASC
+  birthYear_DESC
+  deathDay_ASC
+  deathDay_DESC
+  deathMonth_ASC
+  deathMonth_DESC
+  deathYear_ASC
+  deathYear_DESC
+  name_ASC
+  name_DESC
+  surname_ASC
+  surname_DESC
+}

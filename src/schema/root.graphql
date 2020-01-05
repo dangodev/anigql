@@ -1,0 +1,27 @@
+type Query {
+  film(id: String!): Film
+  films(orderBy: [FilmOrderFields!], limit: Int, yearStart: Int, yearEnd: Int): [Film]!
+  people(orderBy: [PeopleOrderFields!], limit: Int): [Person]!
+  person(id: String!): Person
+}
+
+type Mutation {
+  addStudioToFilm(studio: String!, film: String!): Film
+  addIntlTitle(film: String!, title: Country!): Film
+  addPerson(
+    id: String!
+    birthDay: Int
+    birthMonth: Int
+    birthYear: Int
+    deathDay: Int
+    deathMonth: Int
+    deathYear: Int
+    description: String
+    kanji: String
+    location: String
+    name: String!
+    surname: String!
+    website: String
+  ): Person
+  addDirectorToFilm(person: String!, film: String!): Film
+}

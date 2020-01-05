@@ -1,0 +1,17 @@
+type FrameSequence {
+  ID: String!
+  artists: [Person]!
+  film: Film!
+  frames: [Frame]!
+  keyframeArtists: [Person]!
+  notes: String
+  order: Int!
+}
+
+type Frame {
+  artists: [Person]!
+  image: Image!
+  keyframe: Boolean!
+  notes: String
+  order: Int!
+}
